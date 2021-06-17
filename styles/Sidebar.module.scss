@@ -1,0 +1,79 @@
+.sidebar {
+    background-color: #1f497d;
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    height: 100vh;
+    position: fixed;
+    transition: width .2s;
+
+    .logoWrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 8rem;
+
+
+        h1 {
+            font-size: 4rem;
+            color: #fff;
+        }
+    }
+
+    &:hover {
+        width: 240px;
+
+        .navItemText {
+            display: block;
+            opacity: 1;
+            transition: display .5s, opacity .5s;
+            transition-delay: .1s;
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 3.5rem;
+
+    ul {
+        width: 100%;
+        li {
+            margin-bottom: 1rem;
+
+            a {
+                font-size: 1.4rem;
+                display: flex;
+                align-items: center;
+                border-radius: 1rem;
+                width: 100%;
+                position: relative;
+
+                &:hover {
+                    background: #6280a4;
+                }
+                
+
+                .navItemText {
+                    text-transform: uppercase;
+                    opacity: 0;
+                    display: none;
+                    color: #fff;
+                    position: absolute;
+                    left: 5rem;
+                }
+                
+                svg {
+                    padding: 1rem;
+                    box-sizing: content-box;
+                    color: #fff;
+                    font-size: 3rem;
+                    speak: none;
+                }
+            }
+        }
+    }
+}
+
