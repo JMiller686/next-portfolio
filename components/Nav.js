@@ -1,4 +1,4 @@
-import navStyles from '../styles/NavStyles.module.scss'
+import navStyles from '../styles/Sidebar.module.scss'
 import {BiHome, BiUser, BiWrench, BiGridAlt, BiMessageAltDetail} from "react-icons/bi"
 
 const Nav = () => {

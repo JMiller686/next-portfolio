@@ -7,6 +7,14 @@ const Layout = () => {
     return (
         <div>
             <Sidebar />
+
+            <main>
+                <section id={layoutStyles.home}></section>
+                <section id="about"></section>
+                <section id="skills"></section>
+                <section id="work"></section>
+                <section id="contact"></section>
+            </main>
         </div>
     )
 }
