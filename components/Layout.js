@@ -1,20 +1,15 @@
 import Sidebar from './Sidebar';
+import Footer from './Footer'
 
 import layoutStyles from '../styles/Layout.module.scss'
 
 
-const Layout = () => {
+const Layout = ({children}) => {
     return (
-        <div>
+        <div className={layoutStyles.container}>
             <Sidebar />
-
-            <main>
-                <section id={layoutStyles.home}></section>
-                <section id="about"></section>
-                <section id="skills"></section>
-                <section id="work"></section>
-                <section id="contact"></section>
-            </main>
+            {children}
+            <Footer />
         </div>
     )
 }

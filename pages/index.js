@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import Layout from '../components/Layout'
-
+import Main from '../components/Main'
+import sectionStyles from '../styles/Section.module.scss'
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <meta name="keywords" content="web development, web development chicago, programmer chicago, web design, react developer" />
         <meta name="description" content="Josh Miller is a Front-End Developer serving the Chicagoland area. If you are intersted in working together please give me a call at 773-962-1340."/>
@@ -14,7 +14,12 @@ export default function Home() {
         
       </Head>
 
-      <Layout />
-    </div>
+      <Main>
+        <section id={sectionStyles.home}></section>
+        <section id={sectionStyles.about}></section>
+        <section id={sectionStyles.skills}></section>
+        <section></section>
+      </Main>
+    </>
   )
 }
