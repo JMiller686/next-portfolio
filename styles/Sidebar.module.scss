@@ -1,0 +1,28 @@
+.sidebar {
+    background-color: #1f497d;
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    height: 100vh;
+    position: fixed;
+    transition: width .2s;
+
+    .logoWrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 8rem;
+
+
+        h1 {
+            font-size: 4rem;
+            color: #fff;
+        }
+    }
+
+    &:hover {
+        width: 200px;
+    }
+}
+
+

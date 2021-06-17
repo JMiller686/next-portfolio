@@ -1,0 +1,30 @@
+.nav {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 3.5rem;
+
+    ul {
+        li {
+            list-style: none;
+            margin-bottom: 1rem;
+
+            a {
+                font-size: 1.6rem;
+
+                .navItemText {
+                    text-transform: uppercase;
+                    display: none;
+                }
+                
+                svg {
+                    padding: 1rem;
+                    box-sizing: content-box;
+                    color: #fff;
+                    font-size: 3rem;
+                    speak: none;
+                }
+            }
+        }
+    }
+}
