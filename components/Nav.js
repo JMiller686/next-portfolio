@@ -1,24 +1,35 @@
 import navStyles from '../styles/Sidebar.module.scss'
 import {BiHome, BiUser, BiWrench, BiGridAlt, BiMessageAltDetail} from "react-icons/bi"
+import Link from 'next/link'
 
 const Nav = () => {
     return (
         <nav className={navStyles.nav}>
             <ul>
                 <li>
-                    <a href="/"><BiHome /> <span className={navStyles.navItemText}>Home</span></a>
+                    <Link href="/">
+                        <a><BiHome /> <span className={navStyles.navItemText}>Home</span></a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="#about"><BiUser /> <span className={navStyles.navItemText}>About</span></a>
+                    <Link href="/about">
+                        <a><BiUser /> <span className={navStyles.navItemText}>About</span></a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="#skills"><BiWrench /> <span className={navStyles.navItemText}>Skills</span></a>
+                    <Link href="/skills">
+                        <a><BiWrench /> <span className={navStyles.navItemText}>Skills</span></a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="#work"><BiGridAlt /> <span className={navStyles.navItemText}>Work</span></a>
+                    <Link href="/work">
+                        <a><BiGridAlt /> <span className={navStyles.navItemText}>Work</span></a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="#contact"><BiMessageAltDetail /> <span className={navStyles.navItemText}>Contact</span></a>
+                    <Link href="/contact">
+                        <a><BiMessageAltDetail /> <span className={navStyles.navItemText}>Contact</span></a>
+                    </Link>
                 </li>
             </ul>
         </nav>

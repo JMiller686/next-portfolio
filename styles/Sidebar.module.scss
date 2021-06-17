@@ -1,5 +1,5 @@
 .sidebar {
-    background-color: #1f497d;
+    background-color: #00274c;
     display: flex;
     flex-direction: column;
     width: 120px;
@@ -21,7 +21,7 @@
     }
 
     &:hover {
-        width: 240px;
+        width: 24rem;
 
         .navItemText {
             display: block;
@@ -53,6 +53,10 @@
 
                 &:hover {
                     background: #6280a4;
+
+                    svg {
+                        color: #ff7900;
+                    }
                 }
                 
 

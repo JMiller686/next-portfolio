@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Main from '../components/Main'
-import sectionStyles from '../styles/Section.module.scss'
+import pageStyles from '../styles/Page.module.scss'
+import homeStyles from '../styles/Home.module.scss'
 
 export default function Home() {
   return (
@@ -14,12 +14,16 @@ export default function Home() {
         
       </Head>
 
-      <Main>
-        <section id={sectionStyles.home}></section>
-        <section id={sectionStyles.about}></section>
-        <section id={sectionStyles.skills}></section>
-        <section></section>
-      </Main>
+      <div className={pageStyles.container}>
+        <header>
+            <div className={homeStyles.introWrap}>
+
+            </div>
+            <h1>Hi! I'm <br/><span className={homeStyles.name}>Josh Miller</span></h1>
+            <p className={homeStyles.intro}>A <span>Front-End Developer</span> with a passion for creating rich and interactive experiences for the web.</p>
+        </header>
+      </div>
+      
     </>
   )
 }

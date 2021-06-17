@@ -8,8 +8,12 @@ const Layout = ({children}) => {
     return (
         <div className={layoutStyles.container}>
             <Sidebar />
-            {children}
-            <Footer />
+
+            <main className={layoutStyles.main}>
+                {children}
+            </main>
+            
+            <Footer className={layoutStyles.footer} />
         </div>
     )
 }

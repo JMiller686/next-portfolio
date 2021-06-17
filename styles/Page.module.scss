@@ -1,0 +1,58 @@
+.container {
+    padding: 2rem;
+    max-width: 80rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contentBox {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2.5rem;
+    padding: 4rem;
+
+    p {
+        font-size: 2rem;
+        line-height: 1.4;
+    }
+}
+
+.highlight {
+    color: #ff7900;
+}
+
+.skillWrap {
+    display: flex;
+    flex-wrap: wrap;
+
+    .skillBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 15rem;
+        border-radius: 1rem;
+        margin: 1rem;
+
+        p {
+            font-size: 1.4rem;
+        }
+
+        svg {
+            font-size: 5rem;
+            margin-bottom: .5rem;
+
+            &.html { color: #e76442}
+            &.css {color: #254bdd}
+            &.sass {color: #c76395}
+            &.js {color: #e8d44d;}
+            &.react {color: #5ed3f3}
+            &.next {font-size: 4rem; margin-bottom: 1.3rem; color: #000}
+            &.jQuery {color: #0865a7}
+            &.net {color: #592c8c}
+            &.wordpress {color: #207196}
+            &.github {color: #1a1e22}
+            &.visualStudio {color: #814ac1}
+        }
+    }
+}
