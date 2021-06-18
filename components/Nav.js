@@ -7,27 +7,27 @@ const Nav = () => {
         <nav className={navStyles.nav}>
             <ul>
                 <li>
-                    <Link href="/">
+                    <Link href="#home">
                         <a><BiHome /> <span className={navStyles.navItemText}>Home</span></a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="/about">
+                    <Link href="#about">
                         <a><BiUser /> <span className={navStyles.navItemText}>About</span></a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="/skills">
+                    <Link href="#skills">
                         <a><BiWrench /> <span className={navStyles.navItemText}>Skills</span></a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="/work">
+                    <Link href="#work">
                         <a><BiGridAlt /> <span className={navStyles.navItemText}>Work</span></a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="/contact">
+                    <Link href="#contact">
                         <a><BiMessageAltDetail /> <span className={navStyles.navItemText}>Contact</span></a>
                     </Link>
                 </li>

@@ -1,6 +1,15 @@
 import Head from 'next/head'
+
+import Header from '../components/Header'
+import About from '../components/About'
+import Skills from '../components/Skills'
+import Work from '../components/Work'
+import PageTitle from '../components/PageTitle'
+import ContentBox from '../components/ContentBox'
+
 import pageStyles from '../styles/Page.module.scss'
-import homeStyles from '../styles/Home.module.scss'
+import formStyles from '../styles/Form.module.scss'
+
 
 export default function Home() {
   return (
@@ -11,17 +20,45 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
         <title>Josh Miller | Front-End Developer</title>
-        
       </Head>
 
       <div className={pageStyles.container}>
-        <header>
-            <div className={homeStyles.introWrap}>
+        
+        <Header />
 
-            </div>
-            <h1>Hi! I'm <br/><span className={homeStyles.name}>Josh Miller</span></h1>
-            <p className={homeStyles.intro}>A <span>Front-End Developer</span> with a passion for creating rich and interactive experiences for the web.</p>
-        </header>
+        <About />
+
+        <Skills />
+
+        <Work />
+
+        <section id="contact">
+          <PageTitle eyebrow='Get in touch' title='Contact' />
+
+          <ContentBox>
+            <form action="" className={formStyles.contactForm}>
+              <div className={formStyles.formControl}>
+                <input type="text" id="name" placeholder="Name*" className={formStyles.input}/>
+                <label htmlFor="name" className={formStyles.label}>Name*</label>
+              </div>
+
+              <div className={formStyles.formControl}>
+                <input type="email" id="email" placeholder="Email*" className={formStyles.input}/>
+                <label htmlFor="email" className={formStyles.label}>Email*</label>
+              </div>
+
+              <div className={formStyles.formControl}>
+                <input type="subject" id="subject" placeholder="Subject*" className={formStyles.input}/>
+                <label htmlFor="subject" className={formStyles.label}>Subject*</label>
+              </div>
+
+              <div className={formStyles.formControl}>
+                <input type="message" id="message" placeholder="Message*" className={formStyles.input}/>
+                <label htmlFor="message" className={formStyles.label}>Message*</label>
+              </div>
+            </form>
+          </ContentBox>
+        </section>
       </div>
       
     </>

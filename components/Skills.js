@@ -5,9 +5,9 @@ import {DiHtml5, DiCss3, DiSass, DiJsBadge, DiReact, DiJqueryLogo, DiWordpress, 
 import {SiNextDotJs} from 'react-icons/si'
 import pageStyles from '../styles/Page.module.scss'
 
-const skills = () => {
+const Skills = () => {
     return (
-        <div className={pageStyles.container}>
+        <section className={pageStyles.container} id="skills">
             <PageTitle eyebrow='Take a look at my' title='Skills' />
 
             <ContentBox>
@@ -68,8 +68,8 @@ const skills = () => {
                     </div>
                 </div>
             </ContentBox>
-        </div>
+        </section>
     )
 }
 
-export default skills;
+export default Skills;

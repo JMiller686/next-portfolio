@@ -9,7 +9,7 @@ const Layout = ({children}) => {
         <div className={layoutStyles.container}>
             <Sidebar />
 
-            <main className={layoutStyles.main}>
+            <main className={layoutStyles.main} id="home">
                 {children}
             </main>
             
