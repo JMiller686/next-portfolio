@@ -1,0 +1,22 @@
+.titleWrap {
+    margin-bottom: 6rem;
+
+    .eyebrow {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+
+        &:before {
+            content: '';
+            margin-right: 3rem;
+            display: block;
+            width: 6rem;
+            height: 1px;
+            background: #4d4d4d;
+        }
+    }
+    .pageTitle {
+        font-size: 4rem;
+    }
+}
