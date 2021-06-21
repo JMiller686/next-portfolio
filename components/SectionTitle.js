@@ -1,12 +1,12 @@
 import titleStyles from '../styles/PageTitle.module.scss'
 
-const PageTitle = (props) => {
+const SectionTitle = (props) => {
     return (
         <div className={titleStyles.titleWrap}>
             <p className={titleStyles.eyebrow}>{props.eyebrow}</p>
-            <h1 className={titleStyles.pageTitle}>{props.title}</h1>
+            <h2 className={titleStyles.pageTitle}>{props.title}</h2>
         </div>
     )
 }
 
-export default PageTitle;
+export default SectionTitle;

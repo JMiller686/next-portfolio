@@ -4,11 +4,10 @@ import Header from '../components/Header'
 import About from '../components/About'
 import Skills from '../components/Skills'
 import Work from '../components/Work'
-import PageTitle from '../components/PageTitle'
-import ContentBox from '../components/ContentBox'
+import Contact from '../components/Contact'
 
 import pageStyles from '../styles/Page.module.scss'
-import formStyles from '../styles/Form.module.scss'
+
 
 
 export default function Home() {
@@ -32,33 +31,7 @@ export default function Home() {
 
         <Work />
 
-        <section id="contact">
-          <PageTitle eyebrow='Get in touch' title='Contact' />
-
-          <ContentBox>
-            <form action="" className={formStyles.contactForm}>
-              <div className={formStyles.formControl}>
-                <input type="text" id="name" placeholder="Name*" className={formStyles.input}/>
-                <label htmlFor="name" className={formStyles.label}>Name*</label>
-              </div>
-
-              <div className={formStyles.formControl}>
-                <input type="email" id="email" placeholder="Email*" className={formStyles.input}/>
-                <label htmlFor="email" className={formStyles.label}>Email*</label>
-              </div>
-
-              <div className={formStyles.formControl}>
-                <input type="subject" id="subject" placeholder="Subject*" className={formStyles.input}/>
-                <label htmlFor="subject" className={formStyles.label}>Subject*</label>
-              </div>
-
-              <div className={formStyles.formControl}>
-                <input type="message" id="message" placeholder="Message*" className={formStyles.input}/>
-                <label htmlFor="message" className={formStyles.label}>Message*</label>
-              </div>
-            </form>
-          </ContentBox>
-        </section>
+        <Contact />        
       </div>
       
     </>

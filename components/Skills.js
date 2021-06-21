@@ -1,4 +1,4 @@
-import PageTitle from '../components/PageTitle'
+import SectionTitle from './SectionTitle'
 import ContentBox from '../components/ContentBox'
 
 import {DiHtml5, DiCss3, DiSass, DiJsBadge, DiReact, DiJqueryLogo, DiWordpress, DiNetmagazine, DiGithubBadge, DiVisualstudio} from 'react-icons/di'
@@ -8,7 +8,7 @@ import pageStyles from '../styles/Page.module.scss'
 const Skills = () => {
     return (
         <section className={pageStyles.container} id="skills">
-            <PageTitle eyebrow='Take a look at my' title='Skills' />
+            <SectionTitle eyebrow='Take a look at my' title='Skills' />
 
             <ContentBox>
                 <div className={pageStyles.skillWrap}>
