@@ -58,9 +58,7 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
-    @media screen and (max-width: 767px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    
 
     .skillBox {
         display: flex;
@@ -72,6 +70,11 @@
 
         p {
             font-size: 1.4rem;
+
+            @media screen and (max-width: 767px) {
+                font-size: 1.2rem;
+            }
+            
         }
 
         svg {
