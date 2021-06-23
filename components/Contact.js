@@ -37,7 +37,8 @@ const Contact = () => {
           method: 'post',
           body: JSON.stringify(values)
         }
-      ).then(setIsSubmitted(true))
+      ).then(setIsSubmitted(true)).catch(err => alert(err))
+      
     }
 
 
