@@ -64,6 +64,13 @@
     grid-column: 1/3;
 }
 
+@media screen and (max-width: 767px) {
+    .nameWrap,
+    .emailWrap {
+        grid-column: 1/3;
+    }
+}
+
 #mesage {
     width: 100%
 }
