@@ -10,6 +10,10 @@ const Sidebar = () => {
         setMenuActive(!menuActive);
     }
 
+    const handleNavLinkClick = () => {
+        setMenuActive(false);
+    }
+
     return (
         <>
             <div className={`menuToggle ${menuActive ? 'toggleActive' : ''}`} onClick={handleMenuToggle}>
@@ -23,7 +27,7 @@ const Sidebar = () => {
                 <div className={sidebarStyles.logoWrap}>
                     <h1>JM</h1>
                 </div>
-                <Nav/>
+                <Nav handleClick={handleNavLinkClick}/>
             </aside>
         </>
     )
