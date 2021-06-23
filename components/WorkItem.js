@@ -1,9 +1,19 @@
 import workStyles from '../styles/WorkItem.module.scss'
+import Image from 'next/image'
 
 const WorkItem = ({imgSrc, imgAlt, title, description, siteUrl}) => {
     return (
         <div className={workStyles.workItem}>
-            <img src={imgSrc} alt={imgAlt} className={workStyles.workItemImg}/>
+            <div className={workStyles.workItemImgWrap}>
+                <Image 
+                    src={imgSrc} 
+                    alt={imgAlt}
+                    width={340}
+                    height={250}
+                    layout="responsive" 
+                    className={workStyles.workItemImg} />
+            </div>
+
             <div className={workStyles.workItemContent}>
                 <div className={workStyles.workItemContentHeading}>
                     <h3 className={workStyles.workItemTitle}>{title}</h3>

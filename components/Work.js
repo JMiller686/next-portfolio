@@ -2,6 +2,8 @@ import SectionTitle from './SectionTitle'
 import ContentBox from '../components/ContentBox'
 import WorkItem from './WorkItem'
 
+import southWackerImg from '../public/200southwacker.png'
+
 import pageStyles from '../styles/Page.module.scss'
 
 const Work = () => {
@@ -11,7 +13,7 @@ const Work = () => {
 
             <ContentBox>
                 <WorkItem 
-                    imgSrc="/200southwacker.png"
+                    imgSrc={southWackerImg}
                     imgAlt="200 South Wacker Commerical Office Space"
                     title="200 South Wacker"
                     description="HTML, CSS, JavaScript, ASP.NET"

@@ -1,12 +1,13 @@
 import headerStyles from  '../styles/Header.module.scss'
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import Image from 'next/image'
 
 const Header = () => {
     return (
         <header className={headerStyles.header}>
 
             <div className={headerStyles.headerImgWrap}>
-                <img src="/joshmiller.jpeg" alt="Josh Miller | Front-End Developer" className={headerStyles.headerImg}/>
+                <Image src="/joshmiller.jpeg" alt="Josh Miller | Front-End Developer" width={350} height={350} layout="fixed" className={headerStyles.headerImg} />
             </div>
             
             <div className={headerStyles.introWrap}>
