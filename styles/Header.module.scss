@@ -10,17 +10,28 @@
         min-height: auto;
     }
 
-    .headerImgWrap {
+    .headerContentLeft {
         flex: 0 0 50%;
 
+        @media screen and (max-width: 767px) {
+            flex: 0 0 45%;
+        }
+    }
+
+    .headerImgWrap {
+        width: 35rem;
+
+
         @media screen and (max-width: 991px) {
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        @media screen and (max-width: 767px) {
+            width: 25rem;
         }
 
         .headerImg {
             border-radius: 50%;
-            height: 35rem;
-            width: 35rem;
             flex: 0 0 50%;
         }
     }

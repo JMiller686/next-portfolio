@@ -5,10 +5,12 @@ import Image from 'next/image'
 const Header = () => {
     return (
         <header className={headerStyles.header}>
-
-            <div className={headerStyles.headerImgWrap}>
-                <Image src="/joshmiller.jpeg" alt="Josh Miller | Front-End Developer" width={350} height={350} layout="fixed" className={headerStyles.headerImg} />
+            <div className={headerStyles.headerContentLeft}>
+                <div className={headerStyles.headerImgWrap}>
+                    <Image src="/joshmiller.jpeg" alt="Josh Miller | Front-End Developer" width={350} height={350} layout="responsive" className={headerStyles.headerImg} />
+                </div>
             </div>
+            
             
             <div className={headerStyles.introWrap}>
                 <h1 className={headerStyles.name}><span className={headerStyles.orange}>Josh</span> Miller</h1>
