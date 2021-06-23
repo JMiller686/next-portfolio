@@ -1,13 +1,24 @@
-import pageStyles from '../styles/Page.module.scss'
+import headerStyles from  '../styles/Header.module.scss'
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Header = () => {
     return (
-        <header>
-            <div className={pageStyles.introWrap}>
+        <header className={headerStyles.header}>
 
+            <div className={headerStyles.headerImgWrap}>
+                <img src="/joshmiller.jpeg" alt="Josh Miller | Front-End Developer" className={headerStyles.headerImg}/>
             </div>
-            <h1>Hi! I'm <br/><span className={pageStyles.name}>Josh Miller</span></h1>
-            <p className={pageStyles.intro}>A <span>Front-End Developer</span> with a passion for creating rich and interactive experiences for the web.</p>
+            
+            <div className={headerStyles.introWrap}>
+                <h1 className={headerStyles.name}><span className={headerStyles.orange}>Josh</span> Miller</h1>
+                <p className={headerStyles.intro}>A <span className={headerStyles.orange}>Front-End Developer</span> with a passion for creating rich and interactive experiences for the web.</p>
+
+                <div className={headerStyles.buttonWrap}>
+                    <a href="/Josh-Miller-Resume.pdf" className={headerStyles.resumeBtn} download>Resume</a>
+                    <a href="https://www.linkedin.com/in/jmiller686/" target="_blank" rel="noreferrer noopener" className={headerStyles.socialBtn}><FaLinkedin /></a>
+                    <a href="https://github.com/JMiller686" target="_blank" rel="noreferrer noopener" className={headerStyles.socialBtn}><FaGithub /></a>
+                </div>
+            </div>
         </header>
     )
 }

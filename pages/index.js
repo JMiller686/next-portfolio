@@ -22,7 +22,6 @@ export default function Home() {
       </Head>
 
       <div className={pageStyles.container}>
-        
         <Header />
 
         <About />

@@ -1,10 +1,14 @@
 .workItem {
     border-radius: 1rem;
     display: flex;
-    box-shadow: 5px 6px 43px -20px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 5px 6px 43px -20px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 6px 43px -20px rgba(0,0,0,0.75);
+    box-shadow: 8px 8px 43px -30px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 8px 8px 43px -30px rgba(0,0,0,0.75);
+    -moz-box-shadow: 8px 8px 43px -30px rgba(0,0,0,0.75);
     padding: 4rem;
+
+    @media screen and (max-width: 991px) {
+        flex-direction: column;
+    }
 
     .workItemImg {
         max-width: 35rem;
@@ -12,6 +16,11 @@
         width: 100%;
         border: 1px solid #dedede;
         border-radius: 1rem;
+
+        @media screen and (max-width: 991px) {
+            max-width: none;
+            margin-bottom: 2rem;
+        }
     }
 
     .workItemContent {

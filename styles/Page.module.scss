@@ -3,6 +3,22 @@
     max-width: 100rem;
     width: 100%;
     margin: 0 auto;
+
+    @media screen and (max-width: 991px) {
+        max-width: 70rem;
+    }
+
+    @media screen and (max-width: 767px) {
+        max-width: 60rem;
+    }
+
+    @media screen and (max-width: 600x) {
+        max-width: 45rem;
+    }
+
+    @media screen and (max-width: 500x) {
+        max-width: 40rem;
+    }
     
     header {
         height: 100vh;
@@ -10,6 +26,10 @@
 
     section {
         padding: 10rem 0;
+
+        @media screen and (max-width: 767px) {
+            padding: 5rem 0;
+        }
     }
 }
 
@@ -30,15 +50,19 @@
 }
 
 .skillWrap {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 2rem;
+
+    @media screen and (max-width: 991px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
     .skillBox {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 15rem;
         border-radius: 1rem;
         margin: 1rem;
 
@@ -61,6 +85,7 @@
             &.wordpress {color: #207196}
             &.github {color: #1a1e22}
             &.visualStudio {color: #814ac1}
+            &.photoshop {color:#001834}
         }
     }
 }

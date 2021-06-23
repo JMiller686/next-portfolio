@@ -1,15 +1,31 @@
 import sidebarStyles from '../styles/Sidebar.module.scss'
 import Nav from './Nav'
 
+import {useState, useEffect} from 'react';
+
 const Sidebar = () => {
+    const [menuActive, setMenuActive] = useState(false);
+
+    const handleMenuToggle = () => {
+        setMenuActive(!menuActive);
+    }
+
     return (
-        <aside className={sidebarStyles.sidebar}>
-            <div className={sidebarStyles.logoWrap}>
-                {/*<img src="" alt=""/>*/}
-                <h1>JM</h1>
+        <>
+            <div className={`menuToggle ${menuActive ? 'toggleActive' : ''}`} onClick={handleMenuToggle}>
+                <span className="t"></span>
+                <span className="mt"></span>
+                <span className="mb"></span>
+                <span className="b"></span>
             </div>
-            <Nav />
-        </aside>
+
+            <aside className={`${sidebarStyles.sidebar} ${menuActive ? 'mobileMenuActive' : ''}`} menuActive={menuActive}>
+                <div className={sidebarStyles.logoWrap}>
+                    <h1>JM</h1>
+                </div>
+                <Nav/>
+            </aside>
+        </>
     )
 }
 
