@@ -1,0 +1,115 @@
+
+.header {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+
+    @media screen and (max-width: 991px) {
+        flex-direction: column;
+        padding-top: 6rem;
+        min-height: auto;
+    }
+
+    .headerImgWrap {
+        flex: 0 0 50%;
+
+        @media screen and (max-width: 991px) {
+            margin-bottom: 2rem;
+        }
+
+        .headerImg {
+            border-radius: 50%;
+            height: 35rem;
+            width: 35rem;
+            flex: 0 0 50%;
+        }
+    }
+
+    .introWrap {
+        flex: 0 0 50%;
+
+        @media screen and (max-width: 991px) {
+            text-align: center;
+        }
+
+        .name {
+            font-size: 4.2rem;
+            margin-bottom: 4rem;
+        }
+
+        p {
+            font-size: 2rem;
+
+            &.intro {
+                margin-bottom: 4rem;
+            }
+        }
+
+        .orange {
+            color: #ff7900;
+        }
+
+        .buttonWrap {
+            display: flex;
+
+            @media screen and (max-width: 991px) {
+                justify-content: center;
+            }
+
+            .resumeBtn {
+                background: #00274c;
+                border: 0;
+                border-radius: .5rem;
+                padding: 1.8rem 3.8rem;
+                border:2px solid #00274c;
+                color: #fff;
+                font-size: 1.4rem;
+                letter-spacing: 1px;
+                display: block;
+                transition: all .2s;
+                text-transform: uppercase;
+                margin-right: 4rem;
+            
+                &:hover {
+                    cursor: pointer;
+                    background-color: #00274c;
+                    color: #fff;
+                }
+        
+                &:active {
+                    border-color: #ff7900;
+                }
+            }
+    
+            .socialBtn {
+                background: #fff;
+                border: 0;
+                border-radius: 0.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #00274c;
+                font-size: 2.4rem;
+                padding: 1.6rem;
+                letter-spacing: 1px;
+                -webkit-transition: all 0.2s;
+                transition: all 0.2s;
+                text-transform: uppercase;
+                margin-right: 1rem;
+            
+                &:hover {
+                    cursor: pointer;
+                    background-color: #00274c;
+                    color: #fff;
+                }
+        
+                &:active {
+                    border-color: #ff7900;
+                }
+            }
+
+        }
+        
+    }
+    
+}

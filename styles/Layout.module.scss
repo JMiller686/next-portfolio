@@ -1,6 +1,8 @@
 .main {
     margin-left: 12rem;
     background-color: #f7f7f7;
-    padding-top: 10rem;
-    min-height: 100vh;
+
+    @media screen and (max-width: 991px) {
+        margin-left: 0;
+    }
 }

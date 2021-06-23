@@ -1,5 +1,5 @@
 import navStyles from '../styles/Sidebar.module.scss'
-import {BiHome, BiUser, BiWrench, BiGridAlt, BiMessageAltDetail} from "react-icons/bi"
+import {BiHome, BiUser, BiCodeAlt, BiGridAlt, BiMessageAltDetail} from "react-icons/bi"
 import Link from 'next/link'
 
 const Nav = () => {
@@ -18,7 +18,7 @@ const Nav = () => {
                 </li>
                 <li>
                     <Link href="#skills">
-                        <a><BiWrench /> <span className={navStyles.navItemText}>Skills</span></a>
+                        <a><BiCodeAlt /> <span className={navStyles.navItemText}>Skills</span></a>
                     </Link>
                 </li>
                 <li>

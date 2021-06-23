@@ -2,11 +2,30 @@
     background-color: #00274c;
     display: flex;
     flex-direction: column;
-    width: 120px;
+    width: 12rem;
     height: 100vh;
     position: fixed;
-    transition: width .2s;
+    transition: all .2s;
     z-index: 999;
+
+    @media screen and (min-width: 992px) {
+        &:hover {
+            width: 24rem;
+    
+            .navItemText {
+                display: block;
+                opacity: 1;
+                transition: display .5s, opacity .5s;
+                transition-delay: .1s;
+            }
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        width: 24rem;
+        left: -24rem;
+    }
+
 
     .logoWrap {
         display: flex;
@@ -20,17 +39,7 @@
             color: #fff;
         }
     }
-
-    &:hover {
-        width: 24rem;
-
-        .navItemText {
-            display: block;
-            opacity: 1;
-            transition: display .5s, opacity .5s;
-            transition-delay: .1s;
-        }
-    }
+    
 }
 
 .nav {
@@ -68,6 +77,11 @@
                     color: #fff;
                     position: absolute;
                     left: 5rem;
+
+                    @media screen and (max-width: 991px) {
+                        display: block;
+                        opacity: 1;
+                    }
                 }
                 
                 svg {
