@@ -10,11 +10,15 @@
         min-height: auto;
     }
 
+    @media screen and (max-width: 767px) {
+        justify-content: center;
+    }
+
     .headerContentLeft {
         flex: 0 0 50%;
 
         @media screen and (max-width: 767px) {
-            flex: 0 0 45%;
+            flex: 0 0 35%;
         }
     }
 
