@@ -19,7 +19,7 @@ const Sidebar = () => {
                 <span className="b"></span>
             </div>
 
-            <aside className={`${sidebarStyles.sidebar} ${menuActive ? 'mobileMenuActive' : ''}`} menuActive={menuActive}>
+            <aside className={`${sidebarStyles.sidebar} ${menuActive ? 'mobileMenuActive' : ''}`}>
                 <div className={sidebarStyles.logoWrap}>
                     <h1>JM</h1>
                 </div>
