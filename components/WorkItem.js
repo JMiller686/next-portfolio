@@ -9,7 +9,7 @@ const WorkItem = ({imgSrc, imgAlt, title, description, siteUrl}) => {
                     src={imgSrc} 
                     alt={imgAlt}
                     width={340}
-                    height={250}
+                    height={220}
                     layout="responsive" 
                     className={workStyles.workItemImg} />
             </div>
