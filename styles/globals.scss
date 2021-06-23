@@ -33,9 +33,9 @@ ul, ol {
 .menuToggle {
   display: none;
   width: 3.25rem;
-  position: absolute;
+  position: fixed;
   top: 3rem;
-  right: 5rem;
+  right: 3rem;
   cursor: pointer;
 
   @media screen and (max-width: 991px) {
