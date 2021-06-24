@@ -3,7 +3,7 @@ const mail = require('@sendgrid/mail');
 mail.setApiKey(process.env.SENDGRIDAPI);
 
 
-export default async function handler(req, res) {
+export default function handler(req, res) {
   const body = JSON.parse(req.body);
   
   const message = `
@@ -20,7 +20,7 @@ export default async function handler(req, res) {
     html: message.replace(/\r\n/g, '<br>')
   }
 
-  await mail.send(data)
+  mail.send(data)
 
   res.status(200).json({ status: "Ok" });
 

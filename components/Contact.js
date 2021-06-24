@@ -60,14 +60,23 @@ const Contact = () => {
       setIsSubmitting(true);
     }
 
+    async function sendMail() {
+      await fetch('api/mail',
+        {
+          method: 'post',
+          body: JSON.stringify(values)
+        }
+      ).then(setIsSubmitted(true))
+    }
+
     useEffect(() => {
       if(Object.keys(errors).length === 0 && isSubmitting) {
-        fetch('api/mail',
-          {
-            method: 'post',
-            body: JSON.stringify(values)
-          }
-        ).then(setIsSubmitted(true))
+        try {
+          sendMail()
+        }
+        catch(err) {
+          console.log(err);
+        }
       }
     }, [errors])
 
