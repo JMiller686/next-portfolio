@@ -20,7 +20,7 @@ export default function handler(req, res) {
     html: message.replace(/\r\n/g, '<br>')
   }
 
-  mail.send(data);
+  mail.send(data)
 
   res.status(200).json({ status: "Ok" });
 
