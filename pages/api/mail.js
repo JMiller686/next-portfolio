@@ -5,6 +5,7 @@ mail.setApiKey(process.env.SENDGRIDAPI);
 
 export default function handler(req, res) {
   const body = JSON.parse(req.body);
+  console.log(body);
   
   const message = `
     Name: ${body.name}\r\n
@@ -20,7 +21,7 @@ export default function handler(req, res) {
     html: message.replace(/\r\n/g, '<br>')
   }
 
-  mail.send(data)
+  mail.send(data);
 
   res.status(200).json({ status: "Ok" });
 

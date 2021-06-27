@@ -18,7 +18,7 @@ const Contact = () => {
     })
 
     const [errors, setErrors] = useState({});
-    const [isSubmitting, setIsSubmitting] = useState(false);
+    //const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     
 
@@ -30,55 +30,63 @@ const Contact = () => {
         });
     }
 
-    const validateInputs = (values) => {
-      let errors = {}
+    // const validateInputs = (values) => {
+    //   let errors = {}
 
-      if(!values.name.trim()) {
-        errors.name = "Name is required"
-      }
+    //   if(!values.name.trim()) {
+    //     errors.name = "Name is required"
+    //   }
 
-      if(!values.email) {
-        errors.email = "Email is required"
-      } else if (!/\S+@\S+\.\S+/.test(values.email)) {
-        errors.email = 'Email address is invalid';
-      }
+    //   if(!values.email) {
+    //     errors.email = "Email is required"
+    //   } else if (!/\S+@\S+\.\S+/.test(values.email)) {
+    //     errors.email = 'Email address is invalid';
+    //   }
 
-      if(!values.subject.trim()) {
-        errors.subject = "Subject is required"
-      }
+    //   if(!values.subject.trim()) {
+    //     errors.subject = "Subject is required"
+    //   }
 
-      if(!values.message) {
-        errors.message = "Message is required"
-      }
+    //   if(!values.message) {
+    //     errors.message = "Message is required"
+    //   }
 
-      return errors;
-    }
+    //   return errors;
+    // }
 
-    const handleOnSubmit = (e) => {
+    async function handleOnSubmit(e) {
       e.preventDefault();
-      setErrors(validateInputs(values));
-      setIsSubmitting(true);
-    }
-
-    async function sendMail() {
+      // setErrors(validateInputs(values));
+      //setIsSubmitting(true);
+      const formData = {}
+      Array.from(e.currentTarget.elements).forEach(field => {
+        if(!field.name) return;
+        formData[field.name] = field.value;
+      });
+      
       await fetch('api/mail',
         {
           method: 'post',
           body: JSON.stringify(values)
         }
       ).then(setIsSubmitted(true))
+      .catch(err => {console.log(err)})
     }
 
-    useEffect(() => {
-      if(Object.keys(errors).length === 0 && isSubmitting) {
-        try {
-          sendMail()
-        }
-        catch(err) {
-          console.log(err);
-        }
-      }
-    }, [errors])
+    function sendMail() {
+      
+    }
+
+    // useEffect(() => {
+    //   if(Object.keys(errors).length === 0 && isSubmitting) {
+    //     try {
+    //       sendMail()
+    //     }
+    //     catch(err) {
+    //       console.log(err);
+    //     }
+    //   }
+    // }, [errors])
 
     
 
