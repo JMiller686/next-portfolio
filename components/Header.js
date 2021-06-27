@@ -17,7 +17,7 @@ const Header = () => {
                 <p className={headerStyles.intro}>A <span className={headerStyles.orange}>Front-End Developer</span> with a passion for creating rich and interactive experiences for the web.</p>
 
                 <div className={headerStyles.buttonWrap}>
-                    <a href="/Josh-Miller-Resume.pdf" className={headerStyles.resumeBtn} download>Resume</a>
+                    <a href="/Josh-Miller-Resume.pdf" className={headerStyles.resumeBtn} download>Resum&#xC9;</a>
                     <a href="https://www.linkedin.com/in/jmiller686/" target="_blank" rel="noreferrer noopener" className={headerStyles.socialBtn}><FaLinkedin /></a>
                     <a href="https://github.com/JMiller686" target="_blank" rel="noreferrer noopener" className={headerStyles.socialBtn}><FaGithub /></a>
                 </div>
