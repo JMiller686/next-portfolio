@@ -63,13 +63,24 @@ const Contact = () => {
     }
 
     function sendMail() {
-      fetch('api/mail',
-        {
-          method: 'post',
+      fetch("https://formsubmit.co/ajax/2853d3939e651af324ee6383fa44416f", {
+          method: "POST",
+          headers: { 
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+          },
           body: JSON.stringify(values)
-        }
-      ).then(setIsSubmitted(true))
-      .catch(err => {console.log(err)})
+      })
+    .then(response => response.json())
+    .then(setIsSubmitted(true))
+    .catch(error => console.log(error));
+      // fetch('api/mail',
+      //   {
+      //     method: 'post',
+      //     body: JSON.stringify(values)
+      //   }
+      // ).then(setIsSubmitted(true))
+      // .catch(err => {console.log(err)})
     }
 
     // useEffect(() => {
