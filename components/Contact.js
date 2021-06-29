@@ -20,7 +20,7 @@ const Contact = () => {
     const [errors, setErrors] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const firstRender = useRef(true);
+    //const firstRender = useRef(true);
     
 
     const onHandleChange = (e) => {
@@ -31,46 +31,46 @@ const Contact = () => {
         });
     }
 
-    useEffect(() => {
-      if(firstRender) {
-        firstRender.current = true;
-        return;
-      }
+    // useEffect(() => {
+    //   if(firstRender) {
+    //     firstRender.current = true;
+    //     return;
+    //   }
 
-      setErrors(validateInputs(values));
-      // if(Object.keys(errors).length === 0 && isSubmitting) {
-      //   try {
-      //     sendMail()
-      //   }
-      //   catch(err) {
-      //     console.log(err);
-      //   }
-      // }
-    }, [errors])
+    //   setErrors(validateInputs(values));
+    //   if(Object.keys(errors).length === 0 && isSubmitting) {
+    //     try {
+    //       sendMail()
+    //     }
+    //     catch(err) {
+    //       console.log(err);
+    //     }
+    //   }
+    // }, [errors])
 
-    const validateInputs = (values) => {
-      let errors = {}
+    // const validateInputs = (values) => {
+    //   let errors = {}
 
-      if(!values.name.trim()) {
-        errors.name = "Name is required"
-      }
+    //   if(!values.name.trim()) {
+    //     errors.name = "Name is required"
+    //   }
 
-      if(!values.email) {
-        errors.email = "Email is required"
-      } else if (!/\S+@\S+\.\S+/.test(values.email)) {
-        errors.email = 'Email address is invalid';
-      }
+    //   if(!values.email) {
+    //     errors.email = "Email is required"
+    //   } else if (!/\S+@\S+\.\S+/.test(values.email)) {
+    //     errors.email = 'Email address is invalid';
+    //   }
 
-      if(!values.subject.trim()) {
-        errors.subject = "Subject is required"
-      }
+    //   if(!values.subject.trim()) {
+    //     errors.subject = "Subject is required"
+    //   }
 
-      if(!values.message) {
-        errors.message = "Message is required"
-      }
+    //   if(!values.message) {
+    //     errors.message = "Message is required"
+    //   }
 
-      return errors;
-    }
+    //   return errors;
+    // }
 
     async function handleOnSubmit(e) {
       e.preventDefault();
@@ -78,10 +78,6 @@ const Contact = () => {
       setIsSubmitting(true);
       
       await sendMail();
-    }
-
-    const submit = () => {
-      handleOnSubmit();
     }
 
     function sendMail() {
