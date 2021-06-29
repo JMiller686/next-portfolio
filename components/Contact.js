@@ -4,7 +4,7 @@ import Form from '../components/Form';
 import FormSuccess from '../components/FormSuccess'
 
 
-import {useState, useEffect, useRef} from 'react';
+import {useState} from 'react';
 
 
 
@@ -17,7 +17,7 @@ const Contact = () => {
         message: ''
     })
 
-    const [errors, setErrors] = useState({});
+    //const [errors, setErrors] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     //const firstRender = useRef(true);
