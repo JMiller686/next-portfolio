@@ -8,7 +8,14 @@ const Header = () => {
         <header className={headerStyles.header}>
             <div className={headerStyles.headerContentLeft}>
                 <div className={headerStyles.headerImgWrap}>
-                    <Image src={joshImg} alt="Josh Miller | Front-End Developer" width={350} height={350} layout="responsive" className={headerStyles.headerImg} />
+                    <Image 
+                    src={joshImg} 
+                    alt="Josh Miller | Front-End Developer" 
+                    width={350} 
+                    height={350} 
+                    layout="responsive" 
+                    priority='true'
+                    className={headerStyles.headerImg} />
                 </div>
             </div>
             
