@@ -2,7 +2,12 @@ import SectionTitle from './SectionTitle'
 import ContentBox from '../components/ContentBox'
 import WorkItem from './WorkItem'
 
-import southWackerImg from '../public/200southwacker.png'
+import southWackerImg from '../public/200southwacker.png';
+import wwfamImg from '../public/wwfam.png';
+import istImg from '../public/ist.png';
+import abcImg from '../public/abccustomwebsites.png';
+import playworksImg from '../public/playworkschicago.png';
+
 
 import pageStyles from '../styles/Page.module.scss'
 
@@ -21,7 +26,7 @@ const Work = () => {
                 />
 
                 <WorkItem 
-                    imgSrc="/wwfam.png"
+                    imgSrc={wwfamImg}
                     imgAlt="Weight Watchers Mississippi, Southern Alabama and Florida Panhandle"
                     title="Weight Watchers FAM"
                     description="HTML, CSS, JavaScript, ASP.NET"
@@ -29,7 +34,7 @@ const Work = () => {
                 />
 
                 <WorkItem 
-                    imgSrc="/ist.png"
+                    imgSrc={istImg}
                     imgAlt="Illinois State Treasurer"
                     title="Illinois State Treasurer"
                     description="HTML, CSS, JavaScript, ASP.NET"
@@ -37,7 +42,7 @@ const Work = () => {
                 />
 
                 <WorkItem 
-                    imgSrc="/abccustomwebsites.png"
+                    imgSrc={abcImg}
                     imgAlt="ABC Custom Contractor Websites"
                     title="ABC Custom Websites"
                     description="HTML, CSS, JavaScript, ASP.NET"
@@ -45,7 +50,7 @@ const Work = () => {
                 />
 
                 <WorkItem 
-                    imgSrc="/playworkschicago.png"
+                    imgSrc={playworksImg}
                     imgAlt="PlayWorks Therapy"
                     title="PlayWorks Therapy"
                     description="Wordpress"
