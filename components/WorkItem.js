@@ -11,6 +11,7 @@ const WorkItem = ({imgSrc, imgAlt, title, description, siteUrl}) => {
                     width={340}
                     height={220}
                     layout="responsive" 
+                    loading='lazy'
                     className={workStyles.workItemImg} />
             </div>
 

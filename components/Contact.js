@@ -4,7 +4,7 @@ import Form from '../components/Form';
 import FormSuccess from '../components/FormSuccess'
 
 
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 
 
 
@@ -18,8 +18,9 @@ const Contact = () => {
     })
 
     const [errors, setErrors] = useState({});
-    //const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const firstRender = useRef(true);
     
 
     const onHandleChange = (e) => {
@@ -30,50 +31,71 @@ const Contact = () => {
         });
     }
 
-    // const validateInputs = (values) => {
-    //   let errors = {}
+    useEffect(() => {
+      if(firstRender) {
+        firstRender.current = true;
+        return;
+      }
 
-    //   if(!values.name.trim()) {
-    //     errors.name = "Name is required"
-    //   }
+      setErrors(validateInputs(values));
+      // if(Object.keys(errors).length === 0 && isSubmitting) {
+      //   try {
+      //     sendMail()
+      //   }
+      //   catch(err) {
+      //     console.log(err);
+      //   }
+      // }
+    }, [errors])
 
-    //   if(!values.email) {
-    //     errors.email = "Email is required"
-    //   } else if (!/\S+@\S+\.\S+/.test(values.email)) {
-    //     errors.email = 'Email address is invalid';
-    //   }
+    const validateInputs = (values) => {
+      let errors = {}
 
-    //   if(!values.subject.trim()) {
-    //     errors.subject = "Subject is required"
-    //   }
+      if(!values.name.trim()) {
+        errors.name = "Name is required"
+      }
 
-    //   if(!values.message) {
-    //     errors.message = "Message is required"
-    //   }
+      if(!values.email) {
+        errors.email = "Email is required"
+      } else if (!/\S+@\S+\.\S+/.test(values.email)) {
+        errors.email = 'Email address is invalid';
+      }
 
-    //   return errors;
-    // }
+      if(!values.subject.trim()) {
+        errors.subject = "Subject is required"
+      }
+
+      if(!values.message) {
+        errors.message = "Message is required"
+      }
+
+      return errors;
+    }
 
     async function handleOnSubmit(e) {
       e.preventDefault();
-      //setErrors(validateInputs(values));
-      //setIsSubmitting(true);
+      
+      setIsSubmitting(true);
       
       await sendMail();
     }
 
+    const submit = () => {
+      handleOnSubmit();
+    }
+
     function sendMail() {
       fetch("https://formsubmit.co/ajax/2853d3939e651af324ee6383fa44416f", {
-          method: "POST",
-          headers: { 
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-          },
-          body: JSON.stringify(values)
-      })
-    .then(response => response.json())
-    .then(setIsSubmitted(true))
-    .catch(error => console.log(error));
+            method: "POST",
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(values)
+        })
+      .then(response => response.json())
+      .then(setIsSubmitted(true))
+      .catch(error => console.log(error));
       // fetch('api/mail',
       //   {
       //     method: 'post',
@@ -83,16 +105,7 @@ const Contact = () => {
       // .catch(err => {console.log(err)})
     }
 
-    // useEffect(() => {
-    //   if(Object.keys(errors).length === 0 && isSubmitting) {
-    //     try {
-    //       sendMail()
-    //     }
-    //     catch(err) {
-    //       console.log(err);
-    //     }
-    //   }
-    // }, [errors])
+    
 
     
 
