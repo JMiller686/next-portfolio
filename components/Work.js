@@ -43,6 +43,14 @@ const Work = () => {
                     description="HTML, CSS, JavaScript, ASP.NET"
                     siteUrl="https://abccustomwebsites.com"
                 />
+
+                <WorkItem 
+                    imgSrc="/playworkschicago.png"
+                    imgAlt="PlayWorks Therapy"
+                    title="PlayWorks Therapy"
+                    description="Wordpress"
+                    siteUrl="https://playworkschicago.com"
+                />
             </ContentBox>
         </section>
     )
