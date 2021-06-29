@@ -23,6 +23,7 @@ const Work = () => {
                 {
                     WORK_DATA.map(item => (
                         <WorkItem 
+                            id={item.id}
                             title={item.title}
                             imgSrc={item.imgSrc}
                             imgAlt={item.imgAlt}

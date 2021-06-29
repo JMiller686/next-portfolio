@@ -6,6 +6,7 @@ import playworksImg from '../public/playworkschicago.png';
 
 const WORK_DATA = [
     {
+        id: 1,
         title: '200 South Wacker',
         imgSrc: southWackerImg,
         imgAlt: '200 South Wacker Commerical Office Space',
@@ -13,6 +14,7 @@ const WORK_DATA = [
         siteUrl: 'https://200southwacker.com'
     },
     {
+        id: 2,
         title: 'Weight Watchers FAM',
         imgSrc: wwfamImg,
         imgAlt: 'Weight Watchers Mississippi, Southern Alabama and Florida Panhandle',
@@ -20,6 +22,7 @@ const WORK_DATA = [
         siteUrl: 'https://wwfam.com'
     },
     {
+        id: 3,
         title: 'Illinois State Treasurer',
         imgSrc: istImg,
         imgAlt: 'Illinois State Treasurer',
@@ -27,6 +30,7 @@ const WORK_DATA = [
         siteUrl: 'https://illinoistreasurer.gov'
     },
     {
+        id: 4,
         title: 'ABC Custom Websites',
         imgSrc: abcImg,
         imgAlt: 'ABC Custom Contractor Websites',
@@ -34,6 +38,7 @@ const WORK_DATA = [
         siteUrl: 'https://abccustomwebsites.com'
     },
     {
+        id: 5,
         title: 'PlayWorks Therapy',
         imgSrc: playworksImg,
         imgAlt: 'PlayWorks Therapy',

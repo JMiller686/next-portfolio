@@ -17,7 +17,7 @@ const Contact = () => {
         message: ''
     })
 
-    //const [errors, setErrors] = useState({});
+    const [errors, setErrors] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     //const firstRender = useRef(true);

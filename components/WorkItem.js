@@ -1,9 +1,9 @@
 import workStyles from '../styles/WorkItem.module.scss'
 import Image from 'next/image'
 
-const WorkItem = ({imgSrc, imgAlt, title, description, siteUrl}) => {
+const WorkItem = ({id, imgSrc, imgAlt, title, description, siteUrl}) => {
     return (
-        <div className={workStyles.workItem}>
+        <div className={workStyles.workItem} key={id}>
             <div className={workStyles.workItemImgWrap}>
                 <Image 
                     src={imgSrc} 
