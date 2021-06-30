@@ -6,6 +6,7 @@
     -moz-box-shadow: 8px 8px 43px -30px rgba(0,0,0,0.75);
     padding: 4rem;
 
+
     @media screen and (max-width: 991px) {
         flex-direction: column;
         padding: 0;
@@ -13,6 +14,8 @@
 
     .workItemImgWrap {
         width: 35rem;
+        border-radius: 1rem;
+        border: 1px solid #eee;
 
         @media screen and (max-width: 991px) {
             width: 100%;
