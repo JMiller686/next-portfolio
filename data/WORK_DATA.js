@@ -1,6 +1,7 @@
 import southWackerImg from '../public/200southwacker.png';
 import wwfamImg from '../public/wwfam.png';
 import istImg from '../public/ist.png';
+import ilAbleImg from '../public/ilable.png';
 import abcImg from '../public/abccustomwebsites.png';
 import playworksImg from '../public/playworkschicago.png';
 
@@ -31,6 +32,14 @@ const WORK_DATA = [
     },
     {
         id: 4,
+        title: 'Illinois ABLE',
+        imgSrc: ilAbleImg,
+        imgAlt: 'Illinois ABLE',
+        description: 'HTML, SCSS, JavaScript',
+        siteUrl: 'https://illinoisable.com'
+    },
+    {
+        id: 5,
         title: 'ABC Custom Websites',
         imgSrc: abcImg,
         imgAlt: 'ABC Custom Contractor Websites',
@@ -38,7 +47,7 @@ const WORK_DATA = [
         siteUrl: 'https://abccustomwebsites.com'
     },
     {
-        id: 5,
+        id: 6,
         title: 'PlayWorks Therapy',
         imgSrc: playworksImg,
         imgAlt: 'PlayWorks Therapy',
