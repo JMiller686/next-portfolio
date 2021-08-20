@@ -21,7 +21,7 @@ const WorkItem = ({imgSrc, imgAlt, title, description, siteUrl}) => {
                     <p className={workStyles.workItemDescription}>{description}</p>
                 </div>
                 
-                <a href={siteUrl} className={workStyles.workItemLink} target="_blank" rel="noreferrer noopener">Live</a>
+                <a href={siteUrl} className={workStyles.workItemLink} target="_blank" rel="noreferrer noopener">Live Site</a>
             </div>
         </div>
     )
