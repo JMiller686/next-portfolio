@@ -62,12 +62,20 @@
         }
 
         .workItemLink {
-            font-size: 1.6rem;
-            color: #ff7900;
-            text-decoration: underline;
+            align-self: flex-start;
+            background: #00274c;
+            border: 0;
+            border-radius: 0.5rem;
+            padding: 1.8rem 2.8rem;
+            color: #fff;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
+            text-transform: uppercase;
 
             &:hover {
-                font-weight: bold;
+                color: #ff7900;
             }
         }
 
